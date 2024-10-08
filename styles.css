@@ -1,0 +1,168 @@
+/* Paleta de colores */
+:root {
+    --primary-blue: #2c3e50;      /* Azul oscuro elegante */
+    --accent-coral: #e74c3c;      /* Tono coral para botones y detalles */
+    --light-gray: #f4f6f7;        /* Gris claro para el fondo */
+    --text-gray: #34495e;         /* Gris oscuro para el texto */
+}
+
+/* Estilos Generales */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--light-gray); /* Fondo gris claro */
+    color: var(--text-gray);             /* Color de texto */
+}
+
+h1, h2 {
+    color: var(--primary-blue); /* Títulos en azul oscuro */
+}
+
+p, h3 {
+    color: var(--text-gray); /* Texto en gris oscuro */
+}
+
+/* Banner */
+.banner {
+    background-color: var(--primary-blue); /* Fondo azul oscuro para el banner */
+    color: white;
+    text-align: center;
+    padding: 50px 0;
+    position: relative;
+}
+
+.banner h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+.banner p {
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+
+/* Logo */
+.logo img {
+    width: 100px;
+    height: auto;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+/* Sección de Servicios */
+.servicios {
+    padding: 50px;
+    background-color: white; /* Fondo blanco para los servicios */
+    text-align: center;
+}
+
+/* Grid para organizar los servicios en columnas */
+.servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Ajuste automático del tamaño de las columnas */
+    gap: 20px; /* Espacio entre servicios */
+    margin-top: 30px;
+}
+
+/* Cada bloque de servicio */
+.servicio {
+    background-color: var(--light-gray); /* Fondo claro */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    transition: transform 0.3s ease-in-out; /* Animación suave en hover */
+}
+
+/* Efecto hover para agrandar los servicios */
+.servicio:hover {
+    transform: scale(1.05);
+}
+
+.servicio img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Bordes redondeados */
+    margin-bottom: 15px;
+}
+
+.servicio h3 {
+    margin: 0;
+    color: var(--primary-blue); /* Título del servicio en azul */
+    font-size: 1.5rem;
+}
+
+.servicio p {
+    font-size: 1rem;
+    margin: 15px 0;
+}
+
+/* Botones de "Más información" */
+.btn {
+    background-color: var(--accent-coral); /* Color coral brillante */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out; /* Animación suave */
+}
+
+.btn:hover {
+    background-color: var(--primary-blue); /* Cambia a azul oscuro en hover */
+}
+
+/* Lista adicional de servicios */
+.servicios ul {
+    list-style: none; /* Quita los puntos de las listas */
+    padding: 0;
+    margin: 30px 0 0;
+    font-size: 1.1rem;
+}
+
+.servicios ul li {
+    margin: 10px 0;
+    color: var(--primary-blue); /* Color azul para los servicios adicionales */
+}
+
+/* Sección Nosotros */
+.nosotros {
+    background-color: var(--light-gray); /* Fondo claro */
+    padding: 50px;
+    text-align: center;
+}
+
+.nosotros p {
+    margin: 15px 0;
+    font-size: 1.1rem;
+}
+
+/* Sección Contacto */
+.contacto {
+    background-color: white;
+    padding: 50px;
+    text-align: center;
+}
+
+.contacto a {
+    font-weight: bold;
+    color: var(--primary-blue); /* Enlaces de contacto en azul oscuro */
+    text-decoration: none;      /* Quitar subrayado */
+    transition: color 0.3s ease; /* Suave transición de color en hover */
+    margin-left: 10px;          /* Espaciado entre el ícono y el texto */
+}
+
+/* Alinear íconos con el texto */
+.contacto i {
+    margin-right: 8px; /* Espacio entre el icono y el texto */
+}
+
+/* Efecto hover para los enlaces de contacto */
+.contacto a:hover {
+    color: var(--accent-coral); /* Cambia el color a coral al pasar el mouse */
+}
+
+.contacto a:hover i {
+    color: var(--accent-coral); /* Cambia el color del icono también */
+}
