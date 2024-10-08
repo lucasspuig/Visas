@@ -4,68 +4,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agencia de Visas</title>
+    <link rel="shortcut icon" href="./assets/logo.jpg" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 </head>
 <body>
-    <!-- Banner Principal -->
-    <header class="banner">
+<!-- Banner Principal -->
+<header class="banner">
+   
+    <div class="banner-content">
+        <h1>¡Tramita tu visa con nosotros!</h1>
         <div class="logo">
             <img src="./assests/logo2(1).png" alt="Logo de Agencia de Visas">
         </div>
-        <h1>¡¡Tramita tu visa con nosotros!!</h1>
         <p>Fácil, rápido y seguro.</p>
-    </header>
+        <p>Más de 15 años de experiencia y trayectoria.</p>
+        <p>Atención personalizada.</p>
+        <p>Gestoría 100% online para una amplia gama de países.</p>
+    </div>
+</header>
+
 
     <!-- Servicios -->
     <section class="servicios">
         <h2>Servicios</h2>
         <div class="carousel-container">
             <div class="carousel">
-                <div class="servicio" role="group" aria-hidden="false">
-                    <img src="./assests/visa-canada.jpg" alt="Visa para Canadá" class="lazy">
+                <div class="servicio">
+                    <img src="./assests/visasparatodoslospaises.jpg" alt="Visa para Francia">
+                    <h3>Gestión de visas para una variedad de destinos.</h3>
+                    <p> Ciudadanías italiana y española</p>
+                    <a href="#" class="btn">Más información</a>
+                </div>
+                <div class="servicio">
+                    <img src="./assests/visaestudiante.jpg" alt="Visa de estudiante">
+                    <h3>Visa de estudiante</h3>
+                    <p>Visas de estudiante: Estados Unidos, Canadá, Francia, UK, Australia y mucho más...</p>
+                    <a href="#" class="btn">Más información</a>
+                </div>
+                <div class="servicio active">
+                    <img src="./assests/visa-canada.jpg" alt="Visa para Canadá">
                     <h3>Visa para Canadá</h3>
-                    <p>Visas de turista para Estados Unidos, Canadá, China, Australia, Nueva Zelanda y más...</p>
+                    <p>Visas de turista: Estados Unidos, Canadá, China, Australia, Nueva Zelanda, México y mucho más...</p>
                     <a href="#" class="btn">Más información</a>
                 </div>
-                <div class="servicio" role="group" aria-hidden="true">
-                    <img src="./assests/visaestudiante.jpg" alt="Visa para China" class="lazy">
-                    <h3>Visa para China</h3>
-                    <p>Visas de estudiante para Estados Unidos, Canadá, Francia y más...</p>
-                    <a href="#" class="btn">Más información</a>
-                </div>
-                <div class="servicio" role="group" aria-hidden="true">
-                    <img src="./assests/visa-nuevazelanda.jpg" alt="Visa para Nueva Zelanda" class="lazy">
+                <div class="servicio">
+                    <img src="./assests/visa-nuevazelanda.jpg" alt="Visa para Nueva Zelanda">
                     <h3>Visa para Nueva Zelanda</h3>
-                    <p>Ciudadanías italiana y española.</p>
+                    <p>Permisos ETA Y ESTA</p>
                     <a href="#" class="btn">Más información</a>
                 </div>
-                <div class="servicio" role="group" aria-hidden="true">
-                    <img src="./assests/visa-australia.jpg" alt="Visa para Australia" class="lazy">
+                <div class="servicio">
+                    <img src="./assests/visa-australia.jpg" alt="Visa para Australia">
                     <h3>Visa para Australia</h3>
-                    <p>Ciudadanías italiana y española.</p>
+                    <p>Reunificación familiar</p>
                     <a href="#" class="btn">Más información</a>
                 </div>
-                <div class="servicio" role="group" aria-hidden="true">
-                    <img src="./assests/visasparatodoslospaises.jpg" alt="Visa para todos los paises" class="lazy">
-                    <h3>Visa para todos los paises.</h3>
-                    <p>Ciudadanías italiana y española.</p>
+                <div class="servicio">
+                    <img src="./assests/visa-china.jpg" alt="Visa para China">
+                    <h3>Visa para China</h3>
+                    <p>Lotería de visas</p>
                     <a href="#" class="btn">Más información</a>
                 </div>
+                
             </div>
             <!-- Botones de navegación -->
             <button class="prev">❮</button>
             <button class="next">❯</button>
-        </div>
-        <!-- Indicadores de paginación -->
-        <div class="pagination-dots">
-            <span class="dot" data-index="0"></span>
-            <span class="dot" data-index="1"></span>
-            <span class="dot" data-index="2"></span>
-            <span class="dot" data-index="3"></span>
+            <div class="pagination-dots"></div>
         </div>
     </section>
+
     <!-- Nosotros -->
     <section class="nosotros">
         <h2>Nosotros</h2>
@@ -88,7 +98,7 @@
         </a>
     </section>
 
-
+    <!-- Pie de página -->
     <footer>
         <p>&copy; 2024 Agencia de Visas - Todos los derechos reservados</p>
     </footer>

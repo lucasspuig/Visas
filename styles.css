@@ -7,19 +7,33 @@
 
 body {
     font-family: 'Segoe UI', sans-serif;
-    background-color: var(--light-gray);
+    background-image: url('./assests/Photo\ by\ eberhard\ 🖐\ grossgasteiger\ on\ Unsplash.jpeg');
+    background-size: cover; /* Cubre toda el área del body */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
     color: var(--text-gray);
 }
 
 .banner {
-    background-color: #13245e;
+    background-color: rgba(19, 36, 94, 0.7); /* Fondo oscuro semi-transparente para mejorar la legibilidad */
     color: white;
     text-align: center;
     padding: 50px 0;
 }
 
+.banner-content {
+    max-width: 800px; /* Limita el ancho del contenido */
+    margin: auto; /* Centra el contenido */
+    padding: 20px; /* Espaciado interno */
+}
+
 .banner h1 {
     font-size: 2.5rem;
+}
+.logo img {
+    width: 115px;
+    height: 120px;
+;
 }
 
 .servicios {
