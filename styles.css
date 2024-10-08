@@ -1,106 +1,113 @@
-/* Paleta de colores */
 :root {
-    --primary-blue: #2c3e50;      /* Azul oscuro elegante */
-    --accent-coral: #e74c3c;      /* Tono coral para botones y detalles */
-    --light-gray: #f4f6f7;        /* Gris claro para el fondo */
-    --text-gray: #34495e;         /* Gris oscuro para el texto */
+    --primary-blue: #2644BA;
+    --accent-coral: #e74c3c;
+    --light-gray: #f4f6f7;
+    --text-gray: #000000;
 }
 
-/* Estilos Generales */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: var(--light-gray); /* Fondo gris claro */
-    color: var(--text-gray);             /* Color de texto */
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--light-gray);
+    color: var(--text-gray);
 }
 
-h1, h2 {
-    color: var(--primary-blue); /* Títulos en azul oscuro */
-}
-
-p, h3 {
-    color: var(--text-gray); /* Texto en gris oscuro */
-}
-
-/* Banner */
 .banner {
-    background-color: var(--primary-blue); /* Fondo azul oscuro para el banner */
+    background-color: #13245e;
     color: white;
     text-align: center;
     padding: 50px 0;
-    position: relative;
 }
 
 .banner h1 {
-    margin: 0;
     font-size: 2.5rem;
 }
 
-.banner p {
-    margin: 10px 0;
-    font-size: 1.2rem;
-}
-
-/* Logo */
-.logo img {
-    width: 100px;
-    height: auto;
-    position: absolute;
-    top: 20px;
-    left: 20px;
-}
-
-/* Sección de Servicios */
 .servicios {
     padding: 50px;
-    background-color: white; /* Fondo blanco para los servicios */
+    background-color: white;
     text-align: center;
 }
 
-/* Grid para organizar los servicios en columnas */
-.servicios-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Ajuste automático del tamaño de las columnas */
-    gap: 20px; /* Espacio entre servicios */
-    margin-top: 30px;
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+    width: 45%;
+    margin: auto;
 }
 
-/* Cada bloque de servicio */
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
 .servicio {
-    background-color: var(--light-gray); /* Fondo claro */
+    flex: 0 0 100%;
+    box-sizing: border-box;
+    padding: 30px;
+    background-color: #13245e;
     border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
-    transition: transform 0.3s ease-in-out; /* Animación suave en hover */
+    box-shadow: 0 10px 29px rgba(2, 2, 2, 0.574);
+    text-align: center;
+    opacity: 0;
+    transition: transform 0.3s ease-in-out, opacity 0.5s ease-in-out;
+    color: white;
 }
 
-/* Efecto hover para agrandar los servicios */
-.servicio:hover {
-    transform: scale(1.05);
+.servicio.active {
+    opacity: 1;
 }
 
 .servicio img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px; /* Bordes redondeados */
-    margin-bottom: 15px;
+    width: 60%;
+    border-radius: 8px;
 }
 
-.servicio h3 {
-    margin: 0;
-    color: var(--primary-blue); /* Título del servicio en azul */
-    font-size: 1.5rem;
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--primary-blue);
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 5px;
 }
 
-.servicio p {
-    font-size: 1rem;
-    margin: 15px 0;
+button.prev {
+    left: 10px;
 }
 
-/* Botones de "Más información" */
+button.next {
+    right: 10px;
+}
+
+button.prev:hover, button.next:hover {
+    background-color: var(--accent-coral);
+}
+
+.pagination-dots {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dot.active {
+    background-color: var(--primary-blue);
+}
 .btn {
-    background-color: var(--accent-coral); /* Color coral brillante */
+    background-color: #2644BA; /* Color coral brillante */
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
@@ -113,17 +120,11 @@ p, h3 {
     background-color: var(--primary-blue); /* Cambia a azul oscuro en hover */
 }
 
-/* Lista adicional de servicios */
-.servicios ul {
-    list-style: none; /* Quita los puntos de las listas */
-    padding: 0;
-    margin: 30px 0 0;
-    font-size: 1.1rem;
-}
-
-.servicios ul li {
-    margin: 10px 0;
-    color: var(--primary-blue); /* Color azul para los servicios adicionales */
+/* Sección Nosotros */
+.nosotros {
+    padding: 50px;
+    background-color: var(--light-gray); /* Fondo gris claro */
+    text-align: center;
 }
 
 /* Sección Contacto */
@@ -139,12 +140,32 @@ p, h3 {
     font-size: 50px;              /* Tamaño de los íconos */
     margin-left: 3%;  
     margin-right: 3%;        /* Espacio entre los íconos */
-    color: rgb(0, 0, 0);   /* Color predeterminado */
+    color: var(--text-gray);   /* Color predeterminado */
     transition: color 0.3s ease;   /* Transición suave para el cambio de color */
     text-decoration: none;
 }
 
 /* Efecto hover para cambiar el color de los íconos */
 .contact-link:hover {
-    color: rgba(10, 10, 130, 0.448)   /* Cambia a color coral al pasar el mouse */
+    color: var(--primary-blue);  /* Cambia a azul oscuro al pasar el mouse */
+}
+
+footer {
+    background-color: #101e50;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+@media (max-width: 768px) {
+    .carousel-container {
+        width: 90%;
+    }
+    .servicio img {
+        width: 90%;
+        border-radius: 8px;
+    }
+    .servicio {
+        padding: 20px;
+    }
 }
