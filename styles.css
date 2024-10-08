@@ -126,43 +126,25 @@ p, h3 {
     color: var(--primary-blue); /* Color azul para los servicios adicionales */
 }
 
-/* Sección Nosotros */
-.nosotros {
-    background-color: var(--light-gray); /* Fondo claro */
-    padding: 50px;
-    text-align: center;
-}
-
-.nosotros p {
-    margin: 15px 0;
-    font-size: 1.1rem;
-}
-
 /* Sección Contacto */
 .contacto {
     background-color: white;
     padding: 50px;
     text-align: center;
+    margin-bottom: 4%;
 }
 
-.contacto a {
-    font-weight: bold;
-    color: var(--primary-blue); /* Enlaces de contacto en azul oscuro */
-    text-decoration: none;      /* Quitar subrayado */
-    transition: color 0.3s ease; /* Suave transición de color en hover */
-    margin-left: 10px;          /* Espaciado entre el ícono y el texto */
+/* Estilo para los enlaces de contacto con íconos */
+.contact-link {
+    font-size: 50px;              /* Tamaño de los íconos */
+    margin-left: 3%;  
+    margin-right: 3%;        /* Espacio entre los íconos */
+    color: rgb(0, 0, 0);   /* Color predeterminado */
+    transition: color 0.3s ease;   /* Transición suave para el cambio de color */
+    text-decoration: none;
 }
 
-/* Alinear íconos con el texto */
-.contacto i {
-    margin-right: 8px; /* Espacio entre el icono y el texto */
-}
-
-/* Efecto hover para los enlaces de contacto */
-.contacto a:hover {
-    color: var(--accent-coral); /* Cambia el color a coral al pasar el mouse */
-}
-
-.contacto a:hover i {
-    color: var(--accent-coral); /* Cambia el color del icono también */
+/* Efecto hover para cambiar el color de los íconos */
+.contact-link:hover {
+    color: rgba(10, 10, 130, 0.448)   /* Cambia a color coral al pasar el mouse */
 }
