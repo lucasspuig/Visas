@@ -14,25 +14,87 @@ body {
 }
 
 .banner {
-    background-color: rgb(7, 39, 72); /* Azul semitransparente para mejorar la legibilidad */
-    color: rgb(255, 255, 255);
+    background-image: linear-gradient(to right, rgba(0, 123, 255, 0.8), rgba(50, 100, 255, 0.7)), url('./assets/banner-bg.jpg');
+    background-size: cover;
+    color: white;
     text-align: center;
-    padding: 50px 0;
+    padding: 60px 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
 .banner-content {
-    max-width: 800px; /* Limita el ancho del contenido */
-    margin: auto; /* Centra el contenido */
-    padding: 20px; /* Espaciado interno */
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
 }
 
 .banner h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    animation: fadeInDown 1.2s ease;
 }
 
-.logo img {
-    width: 145px;
-    height: 150px;
+.banner .logo img {
+    width: 190px;
+    height: 190px;
+    padding: 10px 5px 5px 5px;
+    border-radius: 50%;
+    
+    margin-bottom: 20px;
+}
+
+.banner .tagline {
+    font-size: 1.5rem;
+    margin: 15px 0;
+    animation: fadeInUp 1.2s ease;
+}
+
+.banner .highlight {
+    font-size: 1.2rem;
+    font-weight: 300;
+    animation: fadeInUp 1.5s ease;
+}
+
+.cta-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    margin-top: 20px;
+    background-color: var(--primary-blue);
+    color: white;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+    animation: fadeInUp 1.8s ease;
+}
+
+.cta-btn:hover {
+    background-color: var(--accent-blue);
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .servicios {
@@ -59,7 +121,7 @@ body {
     padding: 30px;
     background-color: rgb(23, 34, 75); /* Color de fondo de los servicios */
     border-radius: 8px;
-    box-shadow: 0 10px 29px rgba(2, 2, 2, 0.574);
+    
     text-align: center;
     opacity: 0;
     transition: transform 0.3s ease-in-out, opacity 0.5s ease-in-out;
@@ -138,9 +200,51 @@ button.prev:hover, button.next:hover {
 /* Sección Nosotros */
 .nosotros {
     padding: 50px;
-    background-color: var(--light-blue); /* Fondo azul claro */
+    background-color: rgba(50, 100, 255, 0.7); /* Mantener el fondo gris claro */
     text-align: center;
+    
+    transition: background-color 0.3s ease; /* Transición suave */
 }
+
+.nosotros:hover {
+    background-color: #eaeaea; /* Ligeramente más oscuro al pasar el mouse */
+}
+
+.nosotros h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: rgb(32, 32, 35); /* Usar el azul principal */
+    margin-bottom: 30px;
+    text-transform: uppercase; /* Para darle más estructura */
+    letter-spacing: 2px;
+    transition: color 0.3s ease; /* Transición suave al color */
+}
+
+.nosotros p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: rgb(18, 18, 18); /* Mantener el texto en negro */
+    margin-bottom: 20px;
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Añadir transición */
+}
+
+.nosotros p:hover {
+    opacity: 0.9;
+    transform: scale(1.02); /* Pequeño zoom al pasar el mouse */
+}
+
+/* Animaciones */
+.nosotros-content {
+    opacity: 0;
+    transform: translateY(20px); /* Desplazamiento inicial */
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.nosotros:hover .nosotros-content {
+    opacity: 1;
+    transform: translateY(0); /* Efecto de deslizamiento hacia arriba */
+}
+
 
 /* Sección Contacto */
 .contacto {
