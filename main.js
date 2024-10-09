@@ -3,6 +3,7 @@ const services = document.querySelectorAll('.carousel .servicio');
 const totalServices = services.length;
 const carousel = document.querySelector('.carousel');
 const paginationDots = document.querySelector('.pagination-dots');
+let autoChangeInterval;
 
 // Inicializar puntos de paginación
 for (let i = 0; i < totalServices; i++) {
@@ -11,20 +12,25 @@ for (let i = 0; i < totalServices; i++) {
     dot.addEventListener('click', () => {
         currentIndex = i;
         updateCarousel();
+        resetAutoChange(); // Reset the automatic change on user interaction
     });
     paginationDots.appendChild(dot);
 }
 
+// Navegación del carrusel
 document.querySelector('.next').addEventListener('click', () => {
     currentIndex = (currentIndex + 1) % totalServices;
     updateCarousel();
+    resetAutoChange(); // Reset the automatic change on user interaction
 });
 
 document.querySelector('.prev').addEventListener('click', () => {
     currentIndex = (currentIndex - 1 + totalServices) % totalServices;
     updateCarousel();
+    resetAutoChange(); // Reset the automatic change on user interaction
 });
 
+// Actualizar el carrusel
 function updateCarousel() {
     const width = services[0].clientWidth;
     carousel.style.transform = `translateX(-${currentIndex * width}px)`;
@@ -43,8 +49,19 @@ function updateCarousel() {
 // Actualizar el carrusel en el redimensionamiento de la ventana
 window.addEventListener('resize', updateCarousel);
 
-// Cambia automáticamente el servicio cada 3 segundos
-setInterval(() => {
-    currentIndex = (currentIndex + 1) % totalServices;
-    updateCarousel();
-}, 4000); // Cambia cada 3 segundos
+// Cambia automáticamente el servicio cada 4 segundos
+function startAutoChange() {
+    autoChangeInterval = setInterval(() => {
+        currentIndex = (currentIndex + 1) % totalServices;
+        updateCarousel();
+    }, 4000); // Cambia cada 4 segundos
+}
+
+// Resetear el cambio automático
+function resetAutoChange() {
+    clearInterval(autoChangeInterval);
+    startAutoChange();
+}
+
+// Iniciar el cambio automático al cargar la página
+startAutoChange();
