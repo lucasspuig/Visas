@@ -200,7 +200,7 @@ button.prev:hover, button.next:hover {
 /* Sección Nosotros */
 .nosotros {
     padding: 50px;
-    background-color: rgba(50, 100, 255, 0.7); /* Mantener el fondo gris claro */
+    background-color: rgba(0, 123, 255, 0.8); /* Mantener el fondo gris claro */
     text-align: center;
     
     transition: background-color 0.3s ease; /* Transición suave */
@@ -249,8 +249,9 @@ button.prev:hover, button.next:hover {
 /* Sección Contacto */
 .contacto {
     background-color: var(--white);
-    padding: 50px;
+    padding: 90px;
     text-align: center;
+    padding-bottom: 9%;
     
 }
 
@@ -270,7 +271,7 @@ button.prev:hover, button.next:hover {
 }
 
 footer {
-    background-color: #101e50; /* Color del pie de página */
+    background-color: rgba(0, 123, 255, 0.8); /* Color del pie de página */
     color: white;
     text-align: center;
     padding: 20px;
