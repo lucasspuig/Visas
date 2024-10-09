@@ -40,7 +40,6 @@ body {
     height: 190px;
     padding: 10px 5px 5px 5px;
     border-radius: 50%;
-    
     margin-bottom: 20px;
 }
 
@@ -99,14 +98,14 @@ body {
 
 .servicios {
     padding: 50px;
-    background-color: var(--white); /* Blanco puro para secciones */
+    background-color: #eaeaea; /* Blanco puro para secciones */
     text-align: center;
 }
 
 .carousel-container {
     position: relative;
     overflow: hidden;
-    width: 45%;
+    width: 80%; /* Cambiado a 80% para ser más responsivo */
     margin: auto;
 }
 
@@ -119,9 +118,8 @@ body {
     flex: 0 0 100%;
     box-sizing: border-box;
     padding: 30px;
-    background-color: rgb(23, 34, 75); /* Color de fondo de los servicios */
+    background-color: rgb(10, 48, 160); /* Color de fondo de los servicios */
     border-radius: 8px;
-    
     text-align: center;
     opacity: 0;
     transition: transform 0.3s ease-in-out, opacity 0.5s ease-in-out;
@@ -135,7 +133,7 @@ body {
 .servicio img {
     width: 60%;
     border-radius: 8px;
-    box-shadow:  0 3px 20px rgba(238, 238, 238, 0.718);
+    box-shadow: 0 2px 15px rgba(238, 238, 238, 0.261);
 }
 
 button.prev, button.next {
@@ -197,12 +195,12 @@ button.prev:hover, button.next:hover {
     background-color: var(--accent-blue); /* Azul oscuro en hover */
 }
 
+
 /* Sección Nosotros */
 .nosotros {
     padding: 50px;
     background-color: rgba(0, 123, 255, 0.8); /* Mantener el fondo gris claro */
     text-align: center;
-    
     transition: background-color 0.3s ease; /* Transición suave */
 }
 
@@ -252,7 +250,6 @@ button.prev:hover, button.next:hover {
     padding: 90px;
     text-align: center;
     padding-bottom: 9%;
-    
 }
 
 /* Estilo para los enlaces de contacto con íconos */
@@ -275,19 +272,99 @@ footer {
     color: white;
     text-align: center;
     padding: 20px;
+}
 
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .banner h1 {
+        font-size: 2.5rem;
+    }
 
+    .cta-btn {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .banner h1 {
+        font-size: 2rem;
+    }
+
+    .carousel-container {
+        width: 90%; /* Ancho más amplio en pantallas más pequeñas */
+    }
+
+    .servicio img {
+        width: 80%;
+    }
+
+    .servicio {
+        padding: 20px;
+    }
+
+    .nosotros h2 {
+        font-size: 1.8rem;
+    }
+
+    .contacto {
+        padding: 70px 20px; /* Ajustar el padding para dispositivos móviles */
+    }
+
+    .contact-link {
+        font-size: 40px; /* Tamaño de íconos más pequeño */
+    }
 }
 
 @media (max-width: 768px) {
+    .banner {
+        padding: 40px 10px;
+    }
+
+    .banner .tagline {
+        font-size: 1.2rem; /* Ajustar tamaño de texto */
+    }
+
     .carousel-container {
-        width: 90%;
+        width: 100%;
     }
+
     .servicio img {
-        width: 90%;
-        border-radius: 8px;
+        width: 100%; /* Imágenes ocupan el 100% del contenedor */
     }
-    .servicio {
-        padding: 20px;
+
+    .nosotros {
+        padding: 30px; /* Ajustar el padding */
+    }
+
+    .nosotros h2 {
+        font-size: 1.5rem; /* Tamaño más pequeño en móviles */
+    }
+
+    .nosotros p {
+        font-size: 1rem; /* Tamaño más pequeño en móviles */
+    }
+}
+
+@media (max-width: 576px) {
+    .banner h1 {
+        font-size: 1.5rem; /* Tamaño más pequeño para móviles */
+    }
+
+    .banner .tagline {
+        font-size: 1rem; /* Ajustar tamaño de texto */
+    }
+
+    .cta-btn {
+        padding: 8px 16px; /* Ajustar padding */
+        font-size: 0.9rem; /* Ajustar tamaño */
+    }
+
+    .nosotros h2 {
+        font-size: 1.3rem; /* Tamaño más pequeño en móviles */
+    }
+
+    .contacto {
+        padding: 50px 15px; /* Ajustar el padding */
     }
 }

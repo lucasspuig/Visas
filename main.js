@@ -9,6 +9,8 @@ let autoChangeInterval;
 for (let i = 0; i < totalServices; i++) {
     const dot = document.createElement('span');
     dot.classList.add('dot');
+    dot.setAttribute('role', 'button');
+    dot.setAttribute('aria-label', `Ir al servicio ${i + 1}`);
     dot.addEventListener('click', () => {
         currentIndex = i;
         updateCarousel();
@@ -54,7 +56,7 @@ function startAutoChange() {
     autoChangeInterval = setInterval(() => {
         currentIndex = (currentIndex + 1) % totalServices;
         updateCarousel();
-    }, 4000); // Cambia cada 4 segundos
+    }, 3000); // Cambia cada 4 segundos
 }
 
 // Resetear el cambio automático
@@ -62,6 +64,15 @@ function resetAutoChange() {
     clearInterval(autoChangeInterval);
     startAutoChange();
 }
+
+// Pausar el cambio automático al pasar el mouse
+carousel.addEventListener('mouseenter', () => {
+    clearInterval(autoChangeInterval);
+});
+
+carousel.addEventListener('mouseleave', () => {
+    startAutoChange();
+});
 
 // Iniciar el cambio automático al cargar la página
 startAutoChange();
