@@ -42,3 +42,9 @@ function updateCarousel() {
 
 // Actualizar el carrusel en el redimensionamiento de la ventana
 window.addEventListener('resize', updateCarousel);
+
+// Cambia automáticamente el servicio cada 3 segundos
+setInterval(() => {
+    currentIndex = (currentIndex + 1) % totalServices;
+    updateCarousel();
+}, 4000); // Cambia cada 3 segundos

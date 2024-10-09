@@ -1,22 +1,21 @@
 :root {
-    --primary-blue: #2644BA;
-    --accent-coral: #e74c3c;
-    --light-gray: #f4f6f7;
-    --text-gray: #000000;
+    --primary-blue: rgba(238, 238, 238, 0.397); /* Azul vibrante para botones */
+    --accent-blue: #0056b3;  /* Azul oscuro para hover de botones */
+    --light-blue: #F0F4F8;    /* Azul muy claro para el fondo */
+    --text-dark: #2C3E50;     /* Azul oscuro para texto */
+    --header-color: #34495E;  /* Gris azulado para encabezados */
+    --white: #FFFFFF;         /* Blanco puro */
 }
 
 body {
     font-family: 'Segoe UI', sans-serif;
-    background-image: url('./assests/Photo\ by\ eberhard\ 🖐\ grossgasteiger\ on\ Unsplash.jpeg');
-    background-size: cover; /* Cubre toda el área del body */
-    background-position: center; /* Centra la imagen */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    color: var(--text-gray);
+    background-color: black; /* Fondo azul muy claro */
+    color: var(--text-dark); /* Color del texto */
 }
 
 .banner {
-    background-color: rgba(19, 36, 94, 0.7); /* Fondo oscuro semi-transparente para mejorar la legibilidad */
-    color: white;
+    background-color: rgb(7, 39, 72); /* Azul semitransparente para mejorar la legibilidad */
+    color: rgb(255, 255, 255);
     text-align: center;
     padding: 50px 0;
 }
@@ -30,15 +29,15 @@ body {
 .banner h1 {
     font-size: 2.5rem;
 }
+
 .logo img {
-    width: 115px;
-    height: 120px;
-;
+    width: 145px;
+    height: 150px;
 }
 
 .servicios {
     padding: 50px;
-    background-color: white;
+    background-color: var(--white); /* Blanco puro para secciones */
     text-align: center;
 }
 
@@ -58,7 +57,7 @@ body {
     flex: 0 0 100%;
     box-sizing: border-box;
     padding: 30px;
-    background-color: #13245e;
+    background-color: rgb(23, 34, 75); /* Color de fondo de los servicios */
     border-radius: 8px;
     box-shadow: 0 10px 29px rgba(2, 2, 2, 0.574);
     text-align: center;
@@ -74,13 +73,14 @@ body {
 .servicio img {
     width: 60%;
     border-radius: 8px;
+    box-shadow:  0 3px 20px rgba(238, 238, 238, 0.718);
 }
 
 button.prev, button.next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: var(--primary-blue);
+    background-color: var(--primary-blue); /* Color del botón */
     color: white;
     border: none;
     padding: 10px;
@@ -98,7 +98,7 @@ button.next {
 }
 
 button.prev:hover, button.next:hover {
-    background-color: var(--accent-coral);
+    background-color: var(--accent-blue); /* Color en hover */
 }
 
 .pagination-dots {
@@ -120,8 +120,9 @@ button.prev:hover, button.next:hover {
 .dot.active {
     background-color: var(--primary-blue);
 }
+
 .btn {
-    background-color: #2644BA; /* Color coral brillante */
+    background-color: var(--primary-blue); /* Azul vibrante */
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
@@ -131,22 +132,22 @@ button.prev:hover, button.next:hover {
 }
 
 .btn:hover {
-    background-color: var(--primary-blue); /* Cambia a azul oscuro en hover */
+    background-color: var(--accent-blue); /* Azul oscuro en hover */
 }
 
 /* Sección Nosotros */
 .nosotros {
     padding: 50px;
-    background-color: var(--light-gray); /* Fondo gris claro */
+    background-color: var(--light-blue); /* Fondo azul claro */
     text-align: center;
 }
 
 /* Sección Contacto */
 .contacto {
-    background-color: white;
+    background-color: var(--white);
     padding: 50px;
     text-align: center;
-    margin-bottom: 4%;
+    
 }
 
 /* Estilo para los enlaces de contacto con íconos */
@@ -154,21 +155,23 @@ button.prev:hover, button.next:hover {
     font-size: 50px;              /* Tamaño de los íconos */
     margin-left: 3%;  
     margin-right: 3%;        /* Espacio entre los íconos */
-    color: var(--text-gray);   /* Color predeterminado */
+    color: var(--text-dark);   /* Color predeterminado */
     transition: color 0.3s ease;   /* Transición suave para el cambio de color */
     text-decoration: none;
 }
 
 /* Efecto hover para cambiar el color de los íconos */
 .contact-link:hover {
-    color: var(--primary-blue);  /* Cambia a azul oscuro al pasar el mouse */
+    color: rgba(14, 124, 219, 0.776);  /* Cambia a azul oscuro al pasar el mouse */
 }
 
 footer {
-    background-color: #101e50;
+    background-color: #101e50; /* Color del pie de página */
     color: white;
     text-align: center;
-    padding: 20px 0;
+    padding: 20px;
+
+
 }
 
 @media (max-width: 768px) {
