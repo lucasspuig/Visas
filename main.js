@@ -74,5 +74,21 @@ carousel.addEventListener('mouseleave', () => {
     startAutoChange();
 });
 
-// Iniciar el cambio automático al cargar la página
-startAutoChange();
+
+
+document.addEventListener("DOMContentLoaded", function() {
+        const nosotrosSection = document.querySelector('.nosotros');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    nosotrosSection.classList.add('visible'); // Agrega la clase cuando es visible
+                }
+            });
+        }, {
+     threshold: 0.5 // Activar cuando al menos el 50% de la sección es visible
+        });
+
+    observer.observe(nosotrosSection); // Observa la sección "Nosotros"
+});
+
+

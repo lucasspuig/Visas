@@ -198,52 +198,57 @@ button.prev:hover, button.next:hover {
 
 /* Sección Nosotros */
 .nosotros {
-    padding: 50px;
-    background-color: rgba(0, 123, 255, 0.8); /* Mantener el fondo gris claro */
-    text-align: center;
-    transition: background-color 0.3s ease; /* Transición suave */
-}
-
-.nosotros:hover {
-    background-color: #eaeaea; /* Ligeramente más oscuro al pasar el mouse */
-}
-
-.nosotros h2 {
-    font-size: 2rem;
-    font-weight: bold;
-    color: rgb(32, 32, 35); /* Usar el azul principal */
-    margin-bottom: 30px;
-    text-transform: uppercase; /* Para darle más estructura */
-    letter-spacing: 2px;
-    transition: color 0.3s ease; /* Transición suave al color */
-}
-
-.nosotros p {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: rgb(18, 18, 18); /* Mantener el texto en negro */
-    margin-bottom: 20px;
-    transition: opacity 0.5s ease, transform 0.5s ease; /* Añadir transición */
-}
-
-.nosotros p:hover {
-    opacity: 0.9;
-    transform: scale(1.02); /* Pequeño zoom al pasar el mouse */
-}
-
-/* Animaciones */
-.nosotros-content {
-    opacity: 0;
-    transform: translateY(20px); /* Desplazamiento inicial */
-    transition: opacity 1s ease, transform 1s ease;
-}
-
-.nosotros:hover .nosotros-content {
-    opacity: 1;
-    transform: translateY(0); /* Efecto de deslizamiento hacia arriba */
-}
-
-
+        padding: 50px;
+        background-color: rgba(0, 123, 255, 0.8); /* Mantener el fondo azul */
+        text-align: center;
+        transition: background-color 0.3s ease; /* Transición suave */
+    }
+    
+    .nosotros:hover {
+         background-color: #eaeaea; /* Cambiar el fondo al pasar el mouse */
+    }
+    
+    .nosotros h2 {
+        font-size: 2rem;
+        font-weight: bold;
+        color: rgb(32, 32, 35); /* Azul principal */
+        margin-bottom: 30px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        transition: color 0.3s ease;
+    }
+    
+    /* Ocultar los párrafos inicialmente */
+    .nosotros p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: rgb(18, 18, 18); /* Texto negro */
+        margin-bottom: 20px;
+        opacity: 0; /* Ocultar */
+        visibility: hidden; /* Asegurarse de que no ocupe espacio */
+        transition: opacity 0.5s ease, visibility 0s 0.5s; /* Transición suave de opacidad */
+    }
+    
+    /* Mostrar los párrafos cuando el fondo cambie de color */
+    .nosotros:hover p {
+        opacity: 1; /* Mostrar */
+        visibility: visible; /* Hacer visible */
+        transition: opacity 0.5s ease, visibility 0s 0s; /* Mostrar inmediatamente */
+    }
+    
+    /* Animaciones */
+    .nosotros-content {
+        opacity: 0;
+        transform: translateY(20px); /* Desplazamiento inicial */
+        transition: opacity 1s ease, transform 1s ease;
+    }
+    
+    /* Mostrar la animación cuando el usuario pasa por la sección */
+    .nosotros.visible .nosotros-content {
+        opacity: 1;
+        transform: translateY(0); /* Desplazamiento hacia su posición normal */
+    }
+    
 /* Sección Contacto */
 .contacto {
     background-color: var(--white);
@@ -502,10 +507,23 @@ footer {
 .nosotros p {
     font-size: 17px;
     line-height: 1.8;
-    color: rgb(18, 18, 18); /* Mantener el texto en negro */
     margin-bottom: 20px;
-    transition: opacity 0.5s ease, transform 0.5s ease; /* Añadir transición */
+    color: rgb(18, 18, 18); /* Texto negro */
+    margin-bottom: 20px;
+    opacity: 0; /* Ocultar */
+    visibility: hidden; /* Asegurarse de que no ocupe espacio */
+    transition: opacity 0.5s ease, visibility 0s 0.5s; /* Transición suave de opacidad */
 }
+.nosotros:hover p {
+    opacity: 1; /* Mostrar */
+    visibility: visible; /* Hacer visible */
+    transition: opacity 0.5s ease, visibility 0s 0s; /* Mostrar inmediatamente */
+}
+    /* Mostrar la animación cuando el usuario pasa por la sección */
+    .nosotros.visible .nosotros-content {
+        opacity: 1;
+        transform: translateY(0); /* Desplazamiento hacia su posición normal */
+    }
     /* Sección Contacto */
     .contacto h2{
         margin-bottom: 0%;
