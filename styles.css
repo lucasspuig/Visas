@@ -371,6 +371,141 @@ footer {
     }
 }
 @media (max-width: 425px){
+    /* secccion carrusel/servicio*/
+    .servicios{
+        h3{
+            font-size: 20px;
+        }
+        p{
+            font-size: 14px;
+            margin-bottom: 7%;
+        }
+
+    }
+    .servicios {
+        padding: 23px;
+        background-color: #eaeaea; /* Blanco puro para secciones */
+        text-align: center;
+    }
+    
+    .carousel-container {
+        position: relative;
+        overflow: hidden;
+        width: 100%; /* Cambiado a 80% para ser más responsivo */
+        margin: auto;
+    }
+    
+    .carousel {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+    }
+    
+    .servicio {
+        flex: 0 0 100%;
+        box-sizing: border-box;
+        padding: 33px;
+        background-color: rgb(10, 48, 160); /* Color de fondo de los servicios */
+        border-radius: 8px;
+        text-align: center;
+        opacity: 0;
+        transition: transform 0.3s ease-in-out, opacity 0.5s ease-in-out;
+        color: white;
+    }
+    
+    .servicio.active {
+        opacity: 1;
+    }
+    
+    .servicio img {
+        width: 117%;
+        margin-left: -8%;
+        border-radius: 8px;
+        box-shadow: 0 2px 15px rgba(238, 238, 238, 0.261);
+    }
+    
+    button.prev, button.next {
+        position: absolute;
+        top: 67%;
+        transform: translateY(-50%);
+        background-color: var(--primary-blue); /* Color del botón */
+        color: white;
+        border: none;
+        padding: 4px;
+        font-size: 21px;
+        cursor: pointer;
+        border-radius: 20px;
+    }
+    
+    button.prev {
+        left: 2px;
+    }
+    
+    button.next {
+        right: 2px;
+    }
+    
+    button.prev:hover, button.next:hover {
+        background-color: var(--accent-blue); /* Color en hover */
+    }
+    
+    .pagination-dots {
+        text-align: center;
+        margin-top: 20px;
+    }
+    
+    .dot {
+        height: 10px;
+        width: 10px;
+        margin: 0 5px;
+        background-color: #c6c6c6e5;
+        border-radius: 50%;
+        display: inline-block;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    
+    .dot.active {
+        background-color:  rgba(51, 94, 223, 0.857);
+    }
+    
+    .btn {
+        background-color: var(--primary-blue); /* Azul vibrante */
+        color: white;
+        padding: 7px 15px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: background-color 0.3s ease-in-out; /* Animación suave */
+    }
+    /* Sección Nosotros */
+.nosotros {
+    padding: 40px;
+    background-color: rgba(0, 123, 255, 0.8); /* Mantener el fondo gris claro */
+    text-align: center;
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+
+.nosotros:hover {
+    background-color: #eaeaea; /* Ligeramente más oscuro al pasar el mouse */
+}
+
+.nosotros h2 {
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(32, 32, 35); /* Usar el azul principal */
+    margin-bottom: 40px;
+    text-transform: uppercase; /* Para darle más estructura */
+    letter-spacing: 3px;
+    transition: color 0.3s ease; /* Transición suave al color */
+}
+
+.nosotros p {
+    font-size: 17px;
+    line-height: 1.8;
+    color: rgb(18, 18, 18); /* Mantener el texto en negro */
+    margin-bottom: 20px;
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Añadir transición */
+}
     /* Sección Contacto */
     .contacto h2{
         margin-bottom: 0%;
@@ -414,5 +549,138 @@ footer {
         font-size: 10px;
     }
     
+
+}
+@media (max-width: 375px){
+    /* secccion carrusel/servicio*/
+    .servicios{
+        h3{
+            font-size: 20px;
+        }
+        p{
+            font-size: 14px;
+            margin-bottom: 7%;
+        }
+
+    }
+    .servicios {
+        padding: 23px;
+        background-color: #eaeaea; /* Blanco puro para secciones */
+        text-align: center;
+    }
+    
+    .carousel-container {
+        position: relative;
+        overflow: hidden;
+        width: 103%; /* Cambiado a 80% para ser más responsivo */
+
+    }
+    
+    .carousel {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+    }
+    
+    .servicio {
+        flex: 0 0 100%;
+        box-sizing: border-box;
+        padding: 17px;
+        background-color: rgb(10, 48, 160); /* Color de fondo de los servicios */
+        border-radius: 8px;
+        text-align: center;
+        opacity: 0;
+        transition: transform 0.3s ease-in-out, opacity 0.5s ease-in-out;
+        color: white;
+    }
+    
+    .servicio.active {
+        opacity: 1;
+    }
+    
+    .servicio img {
+        width: 110%;
+        margin-left: -5%;
+        border-radius: 8px;
+        box-shadow: 0 2px 15px rgba(238, 238, 238, 0.261);
+    }
+    
+    button.prev, button.next {
+        position: absolute;
+        top: 66%;
+        transform: translateY(-50%);
+        background-color: var(--primary-blue); /* Color del botón */
+        color: white;
+        border: none;
+        padding: 4px;
+        font-size: 20px;
+        cursor: pointer;
+        border-radius: 20px;
+    }
+    
+    button.prev {
+        left: 2px;
+    }
+    
+    button.next {
+        right: 2px;
+    }
+    
+    button.prev:hover, button.next:hover {
+        background-color: var(--accent-blue); /* Color en hover */
+    }
+    
+    .pagination-dots {
+        text-align: center;
+        margin-top: 20px;
+    }
+    
+    .dot {
+        height: 10px;
+        width: 10px;
+        margin: 0 5px;
+        background-color: #c6c6c6e5;
+        border-radius: 50%;
+        display: inline-block;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    
+    .dot.active {
+        background-color:  rgba(51, 94, 223, 0.857);
+    }
+    
+    .btn {
+        background-color: var(--primary-blue); /* Azul vibrante */
+        color: white;
+        padding: 7px 15px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: background-color 0.3s ease-in-out; /* Animación suave */
+    }
+
+    /*Seccion contacto*/
+    .contacto1 {
+        background-color: var(--white);
+        padding: 20px;
+        text-align: center;
+        padding-bottom: 5%;
+        margin-left: 15%;
+        margin-right: 1%;
+        
+    }
+
+}
+@media (max-width: 320px)   {
+        /*Seccion contacto*/
+        .contacto1 {
+            background-color: var(--white);
+            padding: 20px;
+            text-align: center;
+            padding-bottom: 5%;
+            margin-left: 9%;
+            margin-right: 1%;
+            
+        }
 
 }
