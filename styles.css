@@ -259,13 +259,16 @@ button.prev:hover, button.next:hover {
 }
 .contacto h2{
     margin-bottom: 3%;
+    font-size: 35px;
 }
-
+.contacto1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
 /* Estilo para los enlaces de contacto con íconos */
 .contact-link {
-    font-size: 75px;              /* Tamaño de los íconos */
-    margin-left: 5%;  
-    margin-right: 5%; 
+    font-size: 80px;              /* Tamaño de los íconos */
     margin-top: 8%;       /* Espacio entre los íconos */
     color: var(--text-dark);   /* Color predeterminado */
     transition: color 0.3s ease;   /* Transición suave para el cambio de color */
