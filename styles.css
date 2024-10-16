@@ -254,16 +254,19 @@ button.prev:hover, button.next:hover {
     background-color: var(--white);
     padding: 90px;
     text-align: center;
-    padding-bottom: 9%;
-    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-top: 2%;
+}
+.contacto h2{
+    margin-bottom: 3%;
 }
 
 /* Estilo para los enlaces de contacto con íconos */
 .contact-link {
-    font-size: 50px;              /* Tamaño de los íconos */
-    margin-left: 3%;  
-    margin-right: 3%; 
-    margin-top: 5%;       /* Espacio entre los íconos */
+    font-size: 75px;              /* Tamaño de los íconos */
+    margin-left: 5%;  
+    margin-right: 5%; 
+    margin-top: 8%;       /* Espacio entre los íconos */
     color: var(--text-dark);   /* Color predeterminado */
     transition: color 0.3s ease;   /* Transición suave para el cambio de color */
     text-decoration: none;
@@ -278,7 +281,7 @@ footer {
     background-color: rgba(0, 123, 255, 0.8); /* Color del pie de página */
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 8px;
 }
 
 /* Responsive Design */
@@ -483,42 +486,67 @@ footer {
         transition: background-color 0.3s ease-in-out; /* Animación suave */
     }
     /* Sección Nosotros */
-.nosotros {
-    padding: 40px;
-    background-color: rgba(0, 123, 255, 0.8); /* Mantener el fondo gris claro */
-    text-align: center;
-    transition: background-color 0.3s ease; /* Transición suave */
-}
+    .nosotros {
+            padding: 50px;
+            background-color: rgba(0, 123, 255, 0.8); /* Mantener el fondo azul */
+            text-align: center;
+            transition: background-color 0.3s ease; /* Transición suave */
+        }
+        
+        .nosotros.visible {
+            background-color: #eaeaea; /* Cambiar el fondo cuando se activa la animación */
+        }
+        
+        .nosotros h2 {
+            font-size: 2rem;
+            font-weight: bold;
+            color: rgb(32, 32, 35); /* Azul principal */
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: color 0.3s ease;
+        }
+        
+        /* Ocultar los párrafos inicialmente */
+        .nosotros p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: rgb(18, 18, 18); /* Texto negro */
+            margin-bottom: 20px;
+            opacity: 0; /* Ocultar */
+            visibility: hidden; /* No ocupar espacio */
+            transition: opacity 0.5s ease, visibility 0s 0.5s; /* Transición suave */
+        }
+        
+        /* Mostrar los párrafos cuando la sección sea visible (sin hover) */
+        .nosotros.visible p {
+            opacity: 1; /* Mostrar */
+            visibility: visible; /* Hacer visible */
+            transition: opacity 0.5s ease, visibility 0s 0s; /* Mostrar inmediatamente */
+        }
+        
+        /* Animaciones */
+        .nosotros-content {
+            opacity: 0;
+            transform: translateY(20px); /* Desplazamiento inicial */
+            transition: opacity 1s ease, transform 1s ease;
+        }
+        
+        /* Mostrar la animación cuando el usuario pase por la sección */
+        .nosotros.visible .nosotros-content {
+            opacity: 1;
+            transform: translateY(0); /* Desplazamiento hacia su posición normal */
+        }
+        
 
-.nosotros:hover {
-    background-color: #eaeaea; /* Ligeramente más oscuro al pasar el mouse */
-}
-
-.nosotros h2 {
-    font-size: 30px;
-    font-weight: bold;
-    color: rgb(32, 32, 35); /* Usar el azul principal */
-    margin-bottom: 40px;
-    text-transform: uppercase; /* Para darle más estructura */
-    letter-spacing: 3px;
-    transition: color 0.3s ease; /* Transición suave al color */
-}
-
-.nosotros p {
-    font-size: 17px;
-    line-height: 1.8;
-    margin-bottom: 20px;
-    color: rgb(18, 18, 18); /* Texto negro */
-    margin-bottom: 20px;
-    opacity: 0; /* Ocultar */
-    visibility: hidden; /* Asegurarse de que no ocupe espacio */
-    transition: opacity 0.5s ease, visibility 0s 0.5s; /* Transición suave de opacidad */
-}
-.nosotros:hover p {
-    opacity: 1; /* Mostrar */
-    visibility: visible; /* Hacer visible */
-    transition: opacity 0.5s ease, visibility 0s 0s; /* Mostrar inmediatamente */
-}
+    
+    /* Animaciones */
+    .nosotros-content {
+        opacity: 0;
+        transform: translateY(20px); /* Desplazamiento inicial */
+        transition: opacity 1s ease, transform 1s ease;
+    }
+    
     /* Mostrar la animación cuando el usuario pasa por la sección */
     .nosotros.visible .nosotros-content {
         opacity: 1;

@@ -76,19 +76,22 @@ carousel.addEventListener('mouseleave', () => {
 
 
 
-document.addEventListener("DOMContentLoaded", function() {
+
+    document.addEventListener("DOMContentLoaded", function() {
         const nosotrosSection = document.querySelector('.nosotros');
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    nosotrosSection.classList.add('visible'); // Agrega la clase cuando es visible
+                    nosotrosSection.classList.add('visible'); // Agrega la clase cuando es visible en la pantalla
                 }
             });
         }, {
-     threshold: 0.5 // Activar cuando al menos el 50% de la sección es visible
+        threshold: 0.5 // Activar cuando el 50% de la sección es visible
         });
 
-    observer.observe(nosotrosSection); // Observa la sección "Nosotros"
-});
+        observer.observe(nosotrosSection); // Observar la sección "Nosotros"
+    });
+
+
 
 
