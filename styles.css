@@ -501,7 +501,7 @@ footer {
         }
         
         .nosotros h2 {
-            font-size: 2rem;
+            font-size: 30px;
             font-weight: bold;
             color: rgb(32, 32, 35); /* Azul principal */
             margin-bottom: 30px;
@@ -558,6 +558,7 @@ footer {
     /* Sección Contacto */
     .contacto h2{
         margin-bottom: 5%;
+        font-size: 30px;
     }
     .contact-link {
         font-size: 50px;  
