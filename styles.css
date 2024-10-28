@@ -21,6 +21,29 @@ body {
     padding: 60px 20px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
+        /* Keyframes de las animaciones */
+        @keyframes slideInRight {
+            from { opacity: 0; transform: translateX(100%); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes slideInLeft {
+            from { opacity: 0; transform: translateX(-100%); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        /* Clases de animación */
+        .slide-right { animation: slideInRight 1s ease forwards; }
+        .slide-left { animation: slideInLeft 1s ease forwards; }
+
+        /* Banner contenido */
+        .banner-content h1 {
+            animation: slideInRight 2s ease forwards;
+        }
+        .logo {
+            animation: slideInLeft 2.5s ease forwards;
+        }
+
+        
 
 .banner-content {
     max-width: 800px;
@@ -74,16 +97,7 @@ body {
     background-color: var(--accent-blue);
 }
 
-@keyframes fadeInDown {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+
 
 @keyframes fadeInUp {
     from {
