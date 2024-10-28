@@ -56,7 +56,7 @@ function startAutoChange() {
     autoChangeInterval = setInterval(() => {
         currentIndex = (currentIndex + 1) % totalServices;
         updateCarousel();
-    }, 3000); // Cambia cada 4 segundos
+    }, 15000); // Cambia cada 4 segundos
 }
 
 // Resetear el cambio automático
