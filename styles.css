@@ -486,7 +486,7 @@ footer {
     .servicios{
 
         p{
-            margin-top: 12%;
+            margin-top: 8%;
             margin-bottom: 5%;
             font-size: 15px;
             margin-bottom: 7%;
@@ -595,6 +595,21 @@ footer {
         font-weight: bold;
         transition: background-color 0.3s ease-in-out; /* Animación suave */
     }
+    /* Estilos de Títulos */
+.servi1 h2, .servi2 h2, .servi3 h2, .servi4 h2 {
+    font-size: 1.2rem;
+    color: #007acc;
+    text-transform: uppercase;
+    margin-bottom: 2%;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.servi1 p, .servi2 p, .servi3 p, .servi4 p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: rgb(18, 18, 18);
+}
     /* Sección Nosotros */
     .nosotros {
             padding: 50px;
@@ -709,7 +724,7 @@ footer {
     /* secccion carrusel/servicio*/
     .servicios{
         p{
-            margin-top: 12%;
+            margin-top: 8%;
             margin-bottom: 5%;
             font-size: 15px;
             margin-bottom: 7%;
