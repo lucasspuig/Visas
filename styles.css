@@ -121,6 +121,7 @@ body {
     overflow: hidden;
     width: 50%; /* Cambiado a 80% para ser más responsivo */
     margin: auto;
+    
 }
 
 .carousel {
@@ -138,6 +139,7 @@ body {
     opacity: 0;
     transition: transform 0.3s ease-in-out, opacity 0.5s ease-in-out;
     color: white;
+    
 }
 
 .servicio.active {
@@ -189,6 +191,7 @@ button.prev:hover, button.next:hover {
     display: inline-block;
     cursor: pointer;
     transition: background-color 0.3s;
+    
 }
 
 .dot.active {
@@ -218,6 +221,7 @@ button.prev:hover, button.next:hover {
     max-width: 1800px; /* Centrado y tamaño máximo */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 
 .otroserv:hover {
     transform: scale(1.02);
@@ -258,23 +262,23 @@ button.prev:hover, button.next:hover {
 
 /* Delay en la animación */
 .servi1 {
-    animation: fadeInLeftAlt 0.9s forwards;
-    animation-delay: 0.3s;
+    animation: fadeInLeftAlt 1s forwards;
+    animation-delay: 0.9s;
 }
 
 .servi2 {
-    animation: fadeInRightAlt 0.9s forwards;
-    animation-delay: 0.5s;
+    animation: fadeInRightAlt 1s forwards;
+    animation-delay: 1s;
 }
 
 .servi3 {
-    animation: fadeInLeftAlt 0.9s forwards;
-    animation-delay: 0.7s;
+    animation: fadeInLeftAlt 1s forwards;
+    animation-delay: 1.2s;
 }
 
 .servi4 {
-    animation: fadeInRightAlt 0.9s forwards;
-    animation-delay: 0.9s;
+    animation: fadeInRightAlt 1s forwards;
+    animation-delay: 1.5s;
 }
 
 /* Estilos de Títulos */
@@ -503,7 +507,8 @@ footer {
         position: relative;
         overflow: hidden;
         width: 100%; /* Cambiado a 80% para ser más responsivo */
-        margin: auto;
+        
+        margin-bottom: 25%;
         
     }
     
