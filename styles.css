@@ -40,7 +40,7 @@ body {
             animation: slideInRight 2s ease forwards;
         }
         .logo {
-            animation: slideInLeft 2.5s ease forwards;
+            animation: slideInLeft 3.5s ease forwards;
         }
 
         
@@ -55,7 +55,7 @@ body {
     font-size: 3rem;
     font-weight: bold;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    animation: fadeInDown 1.2s ease;
+    animation: fadeInDown 3.2s ease;
 }
 
 .banner .logo img {
@@ -69,13 +69,13 @@ body {
 .banner .tagline {
     font-size: 1.5rem;
     margin: 15px 0;
-    animation: fadeInUp 1.2s ease;
+    animation: fadeInUp 2.5s ease;
 }
 
 .banner .highlight {
     font-size: 1.2rem;
     font-weight: 300;
-    animation: fadeInUp 1.5s ease;
+    animation: fadeInUp 2.5s ease;
 }
 
 .cta-btn {
@@ -102,7 +102,7 @@ body {
 @keyframes fadeInUp {
     from {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(30px);
     }
     to {
         opacity: 1;
@@ -208,8 +208,90 @@ button.prev:hover, button.next:hover {
 .btn:hover {
     background-color: var(--accent-blue); /* Azul oscuro en hover */
 }
+/* Sección de Servicios Mejorada */
+.otroserv {
+    margin: 6% auto;
+    padding: 2%;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    background-color: #f1f5f9; /* Fondo claro */
+    max-width: 1800px; /* Centrado y tamaño máximo */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
+.otroserv:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
 
+.servi1, .servi2, .servi3, .servi4 {
+    padding: 20px 25px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 25px;
+    opacity: 0;
+}
+
+/* Animación de entrada alternada */
+@keyframes fadeInLeftAlt {
+    0% {
+        opacity: 0;
+        transform: translateX(-60px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRightAlt {
+    0% {
+        opacity: 0;
+        transform: translateX(60px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Delay en la animación */
+.servi1 {
+    animation: fadeInLeftAlt 0.9s forwards;
+    animation-delay: 0.3s;
+}
+
+.servi2 {
+    animation: fadeInRightAlt 0.9s forwards;
+    animation-delay: 0.5s;
+}
+
+.servi3 {
+    animation: fadeInLeftAlt 0.9s forwards;
+    animation-delay: 0.7s;
+}
+
+.servi4 {
+    animation: fadeInRightAlt 0.9s forwards;
+    animation-delay: 0.9s;
+}
+
+/* Estilos de Títulos */
+.servi1 h2, .servi2 h2, .servi3 h2, .servi4 h2 {
+    font-size: 1.6rem;
+    color: #007acc;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.servi1 p, .servi2 p, .servi3 p, .servi4 p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: rgb(18, 18, 18);
+}
 /* Sección Nosotros */
 .nosotros {
         padding: 50px;
@@ -298,7 +380,7 @@ footer {
     background-color: rgba(0, 123, 255, 0.8); /* Color del pie de página */
     color: white;
     text-align: center;
-    padding: 8px;
+    padding: 1px;
 }
 
 /* Responsive Design */
