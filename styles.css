@@ -55,50 +55,16 @@
     color: #1a365d;
 }
 
-/* Ajuste del hero para la barra de navegación fija */
-.hero {
-    margin-top: 82px; /* altura de la navbar */
-    position: relative;
-    height: 600px;
-    background: linear-gradient(45deg, #1a365d, #2a4365);
-    color: white;
-    overflow: hidden;
-}
-
-/* Estilos responsive para la navegación */
-@media (max-width: 768px) {
-    .nav-toggle {
-        display: block;
-    }
-
-    .nav-links {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background: white;
-        flex-direction: column;
-        padding: 1rem;
-        gap: 1rem;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .nav-links a {
-        display: block;
-        padding: 0.5rem 0;
-    }
-}
+/* Hero Section Styles */
 .hero {
     position: relative;
-    height: 600px;
-    background: linear-gradient(45deg, #1a365d, #2a4365);
+    height: 710px;
     color: white;
     overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    transition: background-image 1s ease-in-out; /* Transición suave para cambio de fondo */
+    margin-top: 6%;
 }
 
 .hero-overlay {
@@ -107,37 +73,31 @@
     left: 0;
     width: 100%;
     height: 100%;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
-    padding: 1rem;
-    opacity: 0.2;
-    margin-top: 2%;
-}
-
-.hero-overlay-item {
-    background: white;
-    border-radius: 8px;
-    height: 120px;
+    background: rgba(0, 0, 0, 0.4); /* Overlay oscuro */
+    z-index: 0;
 }
 
 .hero-content {
     position: relative;
     max-width: 1200px;
-    margin: 0 auto;
+    margin-top: 10%;
+    margin-left: 14%;
     padding: 6rem 2rem;
     text-align: center;
-    margin-top: 6%;
+    z-index: 1; /* Asegura que el contenido esté por encima de las imágenes */
 }
 
 .hero h1 {
     font-size: 2.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5%;
 }
 
 .hero h2 {
     font-size: 3.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5%;
+}
+.hero P{
+    margin-top: 3%;
 }
 
 .btn {
@@ -148,15 +108,16 @@
     text-decoration: none;
     transition: all 0.3s ease;
     cursor: pointer;
+    margin-top: 1%;
 }
 
 .btn-white {
-    background: white;
-    color: #1a365d;
+    background: rgba(255, 255, 255, 0.182);
+    color: #ffffff;
 }
 
 .btn-white:hover {
-    background: #f7fafc;
+    background: #2b6ebbd7;
 }
 
 .btn-blue {
@@ -229,19 +190,19 @@
 .student-visa-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    gap: 5rem;
     align-items: center;
 }
 
 .student-visa-content h3 {
     color: #1a365d;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 
-.student-visa-content h4 {
+.student-visa-content h2 {
     font-size: 2rem;
     color: #1a365d;
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
 }
 
 .student-visa-content p {
@@ -254,6 +215,7 @@
     width: 100%;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    margin-left: 5%;
 }
 
 .features-grid {
@@ -280,30 +242,42 @@
 }
 /*fotter*/
 .footer {
-    background-color: #333333;
+    background: rgb(4, 107, 182);
     padding: 8px 3px;
     text-align: center;
     font-family: Arial, sans-serif;
+    box-shadow: 0 0 12px 0px #252525;
+    margin-top: 7%;
 }
 
 .logo {
-    width: 12%;
+    width: 11%;
     margin-bottom: -2%;
     margin-left: 0.5%;
 }
+
+   /* Keyframes de las animaciones */
+   @keyframes slideInLeft {
+    from { opacity: 0; transform: translateX(-100%); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+.slide-left { animation: slideInLeft 4s ease forwards; }
+
 
 .social-container {
     display: flex;
     justify-content: center;
     gap: 50px;
     margin: 20px 0;
+    
 }
 
 .social-icon {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    border: 2px solid #666;
+    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -318,12 +292,13 @@
 
 .social-icon ion-icon {
     color: white;
-    font-size: 35px;
+    font-size: 55px;
+    
 }
 
 .copyright {
     color: #ffffff;
-    font-size: 12px;
+    font-size: 15px;
     margin-top: 20px;
 }
 

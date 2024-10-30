@@ -1,10 +1,27 @@
- // Crear grid de imágenes en el hero
- const heroOverlay = document.getElementById('heroOverlay');
- for (let i = 0; i < 12; i++) {
-     const div = document.createElement('div');
-     div.className = 'hero-overlay-item';
-     heroOverlay.appendChild(div);
- }
+// Arreglo de imágenes de fondo
+const images = [
+    'assets/img-asientosavion.avif',
+    'assets/pasaporteaeropuertoportda.avif', 
+    'assets/aviondespegando.avif',
+    './assets/img-portadamapa.avif',
+     './assets/pasajeroimgportada.avif'
+];
+
+let currentIndex = 0;
+const heroSection = document.querySelector('.hero');
+
+// Función para cambiar la imagen de fondo
+function changeBackgroundImage() {
+    heroSection.style.backgroundImage = `url(${images[currentIndex]})`;
+    currentIndex = (currentIndex + 1) % images.length; // Cicla el índice
+}
+
+// Cambia la imagen cada 5 segundos
+setInterval(changeBackgroundImage, 5000);
+
+// Llama a la función de cambio al cargar la página
+changeBackgroundImage();
+
 
  // Animación suave para las tarjetas de servicio
  const observer = new IntersectionObserver((entries) => {
@@ -46,3 +63,34 @@
          navLinks.classList.remove('active');
      }
  });
+
+ document.addEventListener("DOMContentLoaded", function() {
+    const footer = document.getElementById('contacto');
+    const logo = document.querySelector('.logo');
+    const socialIcons = document.querySelectorAll('.social-icon');
+    const copyright = document.querySelector('.copyright');
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Animar el logo
+                logo.classList.add('slide-left');
+
+                // Animar los íconos sociales
+                socialIcons.forEach((icon, index) => {
+                    icon.classList.add('slide-left');
+                    // Añadir un retraso a cada ícono para un efecto secuencial
+                    icon.style.animationDelay = `${index * 0.1}s`;
+                });
+
+                // Animar el texto de copyright
+                copyright.classList.add('slide-left');
+                
+                observer.unobserve(entry.target);
+            }
+        });
+    });
+
+    observer.observe(footer);
+});
+
