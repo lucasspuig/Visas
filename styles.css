@@ -274,6 +274,11 @@
     margin-bottom: 1rem;
     color: #1a365d;
 }
+.flags {
+    font-size: 2rem; /* Ajusta el tamaño de los emojis */
+    display: flex;
+    gap: 1rem; /* Espacio entre las banderas */
+}
 
 .service-title {
     font-size: 1.25rem;
