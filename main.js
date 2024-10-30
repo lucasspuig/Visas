@@ -42,27 +42,7 @@ changeBackgroundImage();
      observer.observe(card);
  });
 
-      // Toggle para el menú móvil
- const navToggle = document.querySelector('.nav-toggle');
- const navLinks = document.querySelector('.nav-links');
-
- navToggle.addEventListener('click', () => {
-     navLinks.classList.toggle('active');
- });
-
- // Cerrar menú al hacer click en un enlace
- document.querySelectorAll('.nav-links a').forEach(link => {
-     link.addEventListener('click', () => {
-         navLinks.classList.remove('active');
-     });
- });
-
- // Cerrar menú al hacer click fuera
- document.addEventListener('click', (e) => {
-     if (!e.target.closest('.navbar')) {
-         navLinks.classList.remove('active');
-     }
- });
+ 
 
  document.addEventListener("DOMContentLoaded", function() {
     const footer = document.getElementById('contacto');
@@ -92,5 +72,36 @@ changeBackgroundImage();
     });
 
     observer.observe(footer);
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    const heroContent = document.querySelector('.hero-content');
+    heroContent.classList.add('fadeInUp');
+});
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Toggle para el menú móvil
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    navToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+
+    // Cerrar menú al hacer clic en un enlace
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+        });
+    });
+
+    // Cerrar menú al hacer clic fuera
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.navbar')) {
+            navLinks.classList.remove('active');
+        }
+    });
 });
 

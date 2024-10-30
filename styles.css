@@ -40,6 +40,7 @@
     font-weight: 500;
     font-family: sans-serif;
     transition: color 0.3s ease;
+    width: 100%;
 }
 
 .nav-links a:hover {
@@ -52,8 +53,75 @@
     border: none;
     font-size: 1.5rem;
     cursor: pointer;
-    color: #1a365d;
+    color: #2a4365;
 }
+.nav-toggle {
+    display: none;
+    background: #1a365dbc; /* Color de fondo */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 0.3rem 0.8rem; /* Espaciado interno */
+    font-size: 1.2rem; /* Tamaño de fuente */
+    cursor: pointer; /* Cambiar el cursor */
+    color: rgb(255, 255, 255); /* Color del texto */
+    transition: background 0.3s ease; /* Transición suave */
+}
+
+/* Efecto al pasar el mouse */
+.nav-toggle:hover {
+    background: #2a4365; /* Color más claro al pasar el mouse */
+}
+.nav-links {
+    display: none; /* Ocultar inicialmente */
+    position: absolute; /* Posicionarlo adecuadamente */
+    top: 100%; /* Colocarlo justo debajo de la navbar */
+    left: -4px;
+    right: -27px;
+    background: #ffffffda; /* Fondo blanco */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+    padding: 1rem; /* Espaciado interno */
+    z-index: 999; /* Asegurar que esté por encima de otros elementos */
+}
+
+/* Mostrar el menú al tener la clase 'active' */
+.nav-links.active {
+    display: flex; /* Mostrar el menú */
+    flex-direction: column; /* Apilar verticalmente */
+    gap: 0.8rem; /* Espacio entre elementos */
+    text-align: center;
+}
+
+.nav-links a {
+    text-decoration: none; /* Sin subrayado */
+    color: #000000; /* Color del texto */
+    padding: 0.5rem; /* Espaciado interno */
+    border-radius: 4px; /* Bordes redondeados */
+    transition: background 0.3s ease; /* Transición suave */
+}
+
+/* Efecto al pasar el mouse sobre los enlaces */
+.nav-links a:hover {
+    background: #f0f0f0; /* Fondo claro al pasar el mouse */
+}
+
+
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: block; /* Mostrar en pantallas pequeñas */
+    }
+}
+.nav-links {
+    display: none; /* Ocultar inicialmente */
+}
+
+.nav-links.active {
+    display: flex; /* Mostrar el menú cuando tiene la clase 'active' */
+    flex-direction: column; /* Asegúrate de que los elementos se apilen verticalmente */
+    gap: 0.9rem; /* Espacio entre elementos */
+}
+
+
 
 /* Hero Section Styles */
 .hero {
