@@ -4,7 +4,7 @@
     box-sizing: border-box;
     font-family: 'Arial', sans-serif;
 }
-        /* Estilos de la navegación */
+/* Estilos de la navegación */
         .navbar {
     position: fixed;
     top: 0;
@@ -18,6 +18,26 @@
     justify-content: space-between;
     align-items: center;
     height: 100px;
+}
+
+.nav-logo-visible {
+    animation: slideInRight 3s ease-out forwards; /* Aplica la nueva animación */
+}
+
+.nav-logo {
+    position: relative; /* Asegúrate de que el contenedor sea relativo */
+    animation: slideInRight 3s ease-out forwards; /* Cambia el nombre de la animación */
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%); /* Comienza fuera de la pantalla por el lado derecho */
+        opacity: 0; /* Comienza invisible */
+    }
+    to {
+        transform: translateX(0); /* Termina en su posición original */
+        opacity: 1; /* Termina visible */
+    }
 }
 
 
@@ -76,7 +96,7 @@
     position: absolute; /* Posicionarlo adecuadamente */
     top: 100%; /* Colocarlo justo debajo de la navbar */
     left: -4px;
-    right: -27px;
+    right: -70px;
     background: #ffffffda; /* Fondo blanco */
     border-radius: 8px; /* Bordes redondeados */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
@@ -106,7 +126,7 @@
 }
 
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
     .nav-toggle {
         display: block; /* Mostrar en pantallas pequeñas */
     }
@@ -204,7 +224,7 @@
     background: #1a365d;
     color: white;
 }
-
+/*servicios*/
 .btn-blue:hover {
     background: #2a4365;
 }
@@ -262,7 +282,7 @@
     color: #4a5568;
     line-height: 1.5;
 }
-
+/*Nosotros*/
 .student-visa {
     background: #f7fafc;
 }
@@ -320,6 +340,13 @@
     color: #4a5568;
     line-height: 1.5;
 }
+/*animaciones de apartado nosotros y el que sigue*/
+/* Keyframes para las animaciones */
+
+
+
+
+
 /*fotter*/
 .footer {
     background: rgb(4, 107, 182);
@@ -404,4 +431,37 @@
     .service-card {
         padding: 1.5rem;
     }
+}
+
+
+@media (max-width: 425px){
+    
+        .nav-toggle {
+            display: block; /* Mostrar en pantallas pequeñas */
+        }
+    
+    .nav-links {
+        display: none; /* Ocultar inicialmente */
+    }
+    
+    .nav-links.active {
+        display: flex; /* Mostrar el menú cuando tiene la clase 'active' */
+        flex-direction: column; /* Asegúrate de que los elementos se apilen verticalmente */
+        gap: 0.9rem; /* Espacio entre elementos */
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: -4px;
+        right: -30px;
+        background: #ffffffda;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        padding: 1rem;
+        z-index: 999;
+    }
+    
+    
 }

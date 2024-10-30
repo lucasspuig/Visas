@@ -3,8 +3,8 @@ const images = [
     'assets/img-asientosavion.avif',
     'assets/pasaporteaeropuertoportda.avif', 
     'assets/aviondespegando.avif',
-    './assets/img-portadamapa.avif',
-     './assets/pasajeroimgportada.avif'
+    'assets/img-portadamapa.avif',
+    'assets/pasajeroimgportada.avif'
 ];
 
 let currentIndex = 0;
@@ -18,71 +18,61 @@ function changeBackgroundImage() {
 
 // Cambia la imagen cada 5 segundos
 setInterval(changeBackgroundImage, 5000);
-
-// Llama a la función de cambio al cargar la página
 changeBackgroundImage();
 
+// Animación suave para las tarjetas de servicio
+const serviceObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+        }
+    });
+}, {
+    threshold: 0.1
+});
 
- // Animación suave para las tarjetas de servicio
- const observer = new IntersectionObserver((entries) => {
-     entries.forEach(entry => {
-         if (entry.isIntersecting) {
-             entry.target.style.opacity = '1';
-             entry.target.style.transform = 'translateY(0)';
-         }
-     });
- }, {
-     threshold: 0.1
- });
+document.querySelectorAll('.service-card').forEach(card => {
+    card.style.opacity = '0';
+    card.style.transform = 'translateY(20px)';
+    card.style.transition = 'all 0.5s ease-out';
+    serviceObserver.observe(card);
+});
 
- document.querySelectorAll('.service-card').forEach(card => {
-     card.style.opacity = '0';
-     card.style.transform = 'translateY(20px)';
-     card.style.transition = 'all 0.5s ease-out';
-     observer.observe(card);
- });
-
- 
-
- document.addEventListener("DOMContentLoaded", function() {
+// Animación en el pie de página
+document.addEventListener("DOMContentLoaded", function() {
     const footer = document.getElementById('contacto');
     const logo = document.querySelector('.logo');
     const socialIcons = document.querySelectorAll('.social-icon');
     const copyright = document.querySelector('.copyright');
 
-    const observer = new IntersectionObserver(entries => {
+    const footerObserver = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                // Animar el logo
                 logo.classList.add('slide-left');
 
-                // Animar los íconos sociales
                 socialIcons.forEach((icon, index) => {
                     icon.classList.add('slide-left');
-                    // Añadir un retraso a cada ícono para un efecto secuencial
                     icon.style.animationDelay = `${index * 0.1}s`;
                 });
 
-                // Animar el texto de copyright
                 copyright.classList.add('slide-left');
-                
-                observer.unobserve(entry.target);
+                footerObserver.unobserve(entry.target);
             }
         });
     });
 
-    observer.observe(footer);
+    footerObserver.observe(footer);
 });
 
-document.addEventListener("DOMContentLoaded", function() {
+// Animación para el contenido del héroe
+document.addEventListener("DOMContentLoaded", () => {
     const heroContent = document.querySelector('.hero-content');
     heroContent.classList.add('fadeInUp');
 });
 
-
-
+// Toggle para el menú móvil
 document.addEventListener('DOMContentLoaded', () => {
-    // Toggle para el menú móvil
     const navToggle = document.querySelector('.nav-toggle');
     const navLinks = document.querySelector('.nav-links');
 
@@ -105,3 +95,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+    const navLogo = document.querySelector('.nav-logo');
+
+    // Función para manejar el desplazamiento
+    const handleScroll = () => {
+        const scrollTop = window.scrollY;
+        if (scrollTop > 100) { // Cambia este valor según tu necesidad
+            navLogo.classList.add('nav-logo-visible'); // Añade la clase para mostrar el logo
+        }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+});
