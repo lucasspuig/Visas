@@ -434,8 +434,11 @@
 }
 
 
+
 @media (max-width: 425px){
-    
+
+    /*Barra de navegacion*/
+
         .nav-toggle {
             display: block; /* Mostrar en pantallas pequeñas */
         }
@@ -456,12 +459,77 @@
         top: 100%;
         left: -4px;
         right: -30px;
-        background: #ffffffda;
+        background: #ffffffed;
         border-radius: 8px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         padding: 1rem;
         z-index: 999;
     }
+    .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 75px;
+    }
+    .nav-links a {
+        text-decoration: none;
+        color: #06176d;
+        padding: 0.5rem;
+        border-radius: 4px;
+        transition: background 0.3s ease;
+        font-weight: 600;
+    }
+    .hero-content {
+        position: relative;
+        max-width: 1200px;
+        margin-top: 25%;
+        margin-left: 3%;
+        padding: 6rem 2rem;
+        text-align: center;
+        z-index: 1;
+    }
+    /*apartado de nosotros */
+    .student-visa-image {
+        width: 100%;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        margin-left: 0%;
+    }
+    /*footer*/
+    .social-icon ion-icon {
+        color: white;
+        font-size: 40px;
+    }
+    .logo {
+        width: 29%;
+        margin-bottom: -7%;
+        margin-left: 2%;
+    }
+    .copyright {
+        color: #ffffff;
+        font-size: 12px;
+        margin-top: 24px;
+    }
     
-    
+}
+
+@media (max-width: 375px){
+    .nav-logo img {
+        margin-top: 3%;
+        width: 42%;
+    }
+}
+@media (max-width: 320px) {
+    .nav-logo img {
+        margin-top: 3%;
+        width: 53%;
+    }
 }
