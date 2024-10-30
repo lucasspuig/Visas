@@ -87,6 +87,18 @@
     z-index: 1; /* Asegura que el contenido esté por encima de las imágenes */
 }
 
+@keyframes slideInLeft {
+    from { opacity: 0; transform: translateX(-100%); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+.hero-content {
+    opacity: 0; /* Ocultar inicialmente */
+    animation: slideInLeft 3s ease forwards; /* Aplicar la animación */
+    animation-delay: 0.1s; /* Retraso antes de la animación */
+}
+
+
 .hero h1 {
     font-size: 2.5rem;
     margin-bottom: 0.5%;
