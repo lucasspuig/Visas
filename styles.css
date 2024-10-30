@@ -518,6 +518,32 @@
         font-size: 12px;
         margin-top: 24px;
     }
+    /* Hero Section Styles */
+
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Overlay oscuro */
+    z-index: 0;
+}
+
+
+@keyframes slideInLeft {
+    from { opacity: 0; transform: translateX(-100%); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+.hero-content {
+    opacity: 0; /* Ocultar inicialmente */
+    animation: slideInLeft 3s ease forwards; /* Aplicar la animación */
+    animation-delay: 0.1s; /* Retraso antes de la animación */
+}
+
+
     
 }
 
