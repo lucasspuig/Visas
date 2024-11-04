@@ -536,6 +536,48 @@
         text-align: center;
         z-index: 1;
     }
+    .hero-content{
+        margin-top: 40%;
+    }
+    .hero h1 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5%;
+        letter-spacing: 1px;
+    }
+    .hero h2 {
+        font-size: 3rem;             /* Larger font size for emphasis */
+        font-weight: 700;              /* Bold weight for modern look */
+        margin-bottom: 0.8%;
+        margin-top: 3%;
+        letter-spacing: 1px;         /* Slightly increased letter spacing */
+        font-family: 'Poppins', sans-serif;
+        color: #ffffff;                /* Ensure contrast with the background */
+        text-transform: uppercase;     /* Optional: Makes text appear bold and impactful */
+    }
+    
+    
+    
+    .hero P{
+        font-size: 0.9rem;
+        margin-top: 4%;
+    }
+    
+    .btn {
+        display: inline-block;
+        padding: 1rem 2rem;
+        border-radius: 9999px;
+        font-weight: bold;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        margin-top: 1%;
+    }
+    
+    .btn-white {
+        background: rgba(255, 255, 255, 0.182);
+        color: #ffffff;
+        font-size: 1rem;
+    }
     /*apartado de nosotros */
     .student-visa-image {
         width: 100%;
@@ -575,6 +617,48 @@
         animation: slideInRight 3s ease-out forwards;
         margin-right: 0%;
         margin-left: -13%;
+    }
+    .hero-content{
+        margin-top: 40%;
+    }
+    .hero h1 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5%;
+        letter-spacing: 1px;
+    }
+    .hero h2 {
+        font-size: 3rem;             /* Larger font size for emphasis */
+        font-weight: 700;              /* Bold weight for modern look */
+        margin-bottom: 0.8%;
+        margin-top: 3%;
+        letter-spacing: 1px;         /* Slightly increased letter spacing */
+        font-family: 'Poppins', sans-serif;
+        color: #ffffff;                /* Ensure contrast with the background */
+        text-transform: uppercase;     /* Optional: Makes text appear bold and impactful */
+    }
+    
+    
+    
+    .hero P{
+        font-size: 0.9rem;
+        margin-top: 4%;
+    }
+    
+    .btn {
+        display: inline-block;
+        padding: 1rem 2rem;
+        border-radius: 9999px;
+        font-weight: bold;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        margin-top: 1%;
+    }
+    
+    .btn-white {
+        background: rgba(255, 255, 255, 0.182);
+        color: #ffffff;
+        font-size: 1rem;
     }
      /*footer*/
      .social-icon ion-icon {
