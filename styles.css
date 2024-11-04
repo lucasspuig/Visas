@@ -17,7 +17,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100px;
+    height: 103px;
+    background-color:rgb(4, 107, 182);
 }
 
 .nav-logo-visible {
@@ -154,7 +155,6 @@
     overflow: hidden;
     background-size: cover;
     background-position: center;
-    transition: background-image 1s ease-in-out; /* Transición suave para cambio de fondo */
     margin-top: 6%;
 }
 
@@ -164,10 +164,33 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.4); /* Overlay oscuro */
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: opacity 1s ease-in-out;
+    opacity: 0;
     z-index: 0;
 }
 
+.hero-background-1 {
+    z-index: 0;
+}
+
+.hero-background-2 {
+    z-index: 0;
+}
+
+/* Fade-in animation for hero content */
 .hero-content {
     position: relative;
     max-width: 1200px;
@@ -175,18 +198,15 @@
     margin-left: 14%;
     padding: 6rem 2rem;
     text-align: center;
-    z-index: 1; /* Asegura que el contenido esté por encima de las imágenes */
+    z-index: 2;
+    opacity: 0;
+    animation: slideInLeft 2s ease forwards;
+    animation-delay: 0.1s;
 }
 
 @keyframes slideInLeft {
     from { opacity: 0; transform: translateX(-100%); }
     to { opacity: 1; transform: translateX(0); }
-}
-
-.hero-content {
-    opacity: 0; /* Ocultar inicialmente */
-    animation: slideInLeft 3s ease forwards; /* Aplicar la animación */
-    animation-delay: 0.1s; /* Retraso antes de la animación */
 }
 
 
@@ -449,13 +469,13 @@
     .nav-logo img {
         margin-top: 23%;
         margin-right: 5%;
-        width: 65%;
+        width: 61%;
     }
     .nav-logo {
         position: relative;
         animation: slideInRight 3s ease-out forwards;
-        margin-right: 11%;
-        margin-left: -13%;
+        margin-right: 9%;
+        margin-left: -13%
     }
         .nav-toggle {
             display: block; /* Mostrar en pantallas pequeñas */
@@ -496,6 +516,7 @@
     justify-content: space-evenly;
     align-items: center;
     height: 75px;
+    background-color:rgb(4, 107, 182);
     }
     .nav-links a {
         text-decoration: none;
@@ -525,10 +546,10 @@
     /*footer*/
     .social-icon ion-icon {
         color: white;
-        font-size: 40px;
+        font-size: 50px;
     }
     .logo {
-        width: 29%;
+        width: 35%;
         margin-bottom: -7%;
         margin-left: 2%;
     }
@@ -547,13 +568,26 @@
     .nav-logo img {
         margin-top: 23%;
         margin-right: 5%;
-        width: 67%;
+        width: 65%;
     }
     .nav-logo {
         position: relative;
         animation: slideInRight 3s ease-out forwards;
         margin-right: 0%;
         margin-left: -13%;
+    }
+     /*footer*/
+     .social-icon ion-icon {
+        color: white;
+        font-size: 50px;
+    }
+    .logo {
+        width: 35%;
+        margin-bottom: -7%;
+        margin-left: 2%;
+    }
+    ion-icon:hover{
+        color: #999999;
     }
 }
 

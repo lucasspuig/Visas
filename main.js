@@ -1,4 +1,4 @@
-// Arreglo de imágenes de fondo
+// Array of background images
 const images = [
     'assets/img-asientosavion.avif',
     'assets/pasaporteaeropuertoportda.avif', 
@@ -7,18 +7,48 @@ const images = [
     'assets/pasajeroimgportada.avif'
 ];
 
-let currentIndex = 0;
-const heroSection = document.querySelector('.hero');
+// Preload images
+images.forEach(src => {
+    const img = new Image();
+    img.src = src;
+});
 
-// Función para cambiar la imagen de fondo
+let currentIndex = 0;
+const background1 = document.createElement('div');
+const background2 = document.createElement('div');
+
+// Set initial classes and styles for backgrounds
+background1.className = 'hero-background hero-background-1';
+background2.className = 'hero-background hero-background-2';
+document.querySelector('.hero').prepend(background2);
+document.querySelector('.hero').prepend(background1);
+
+// Initial background setup
+background1.style.backgroundImage = `url(${images[currentIndex]})`;
+background1.style.opacity = 1;
+background2.style.opacity = 0;
+
 function changeBackgroundImage() {
-    heroSection.style.backgroundImage = `url(${images[currentIndex]})`;
-    currentIndex = (currentIndex + 1) % images.length; // Cicla el índice
+    // Determine next index and layers to fade
+    currentIndex = (currentIndex + 1) % images.length;
+    const nextImage = images[currentIndex];
+
+    // Alternate opacity for crossfade effect
+    if (background1.style.opacity == 1) {
+        background2.style.backgroundImage = `url(${nextImage})`;
+        background2.style.opacity = 1;
+        background1.style.opacity = 0;
+    } else {
+        background1.style.backgroundImage = `url(${nextImage})`;
+        background1.style.opacity = 1;
+        background2.style.opacity = 0;
+    }
 }
 
-// Cambia la imagen cada 5 segundos
-setInterval(changeBackgroundImage, 5000);
+// Change background every 5 seconds
+setInterval(changeBackgroundImage, 6000);
 changeBackgroundImage();
+
 
 // Animación suave para las tarjetas de servicio
 const serviceObserver = new IntersectionObserver((entries) => {
