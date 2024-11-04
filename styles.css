@@ -194,7 +194,7 @@
 .hero-content {
     position: relative;
     max-width: 1200px;
-    margin-top: 10%;
+    margin-top: 8%;
     margin-left: 14%;
     padding: 6rem 2rem;
     text-align: center;
@@ -210,18 +210,31 @@
 }
 
 
+
 .hero h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin-bottom: 0.5%;
+    letter-spacing: 1px;
+}
+.hero h2 {
+    font-size: 4.3rem;             /* Larger font size for emphasis */
+    font-weight: 700;              /* Bold weight for modern look */
+    margin-bottom: 0.8%;
+    margin-top: 3%;
+    letter-spacing: 2px;         /* Slightly increased letter spacing */
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;                /* Ensure contrast with the background */
+    text-transform: uppercase;     /* Optional: Makes text appear bold and impactful */
 }
 
-.hero h2 {
-    font-size: 3.5rem;
-    margin-bottom: 0.5%;
-}
+
+
 .hero P{
-    margin-top: 3%;
+    font-size: 1.2rem;
+    margin-top: 4%;
 }
+
+
 
 .btn {
     display: inline-block;
