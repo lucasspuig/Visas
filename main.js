@@ -3,8 +3,9 @@ const images = [
     'assets/img-asientosavion.avif',
     'assets/pasaporteaeropuertoportda.avif', 
     'assets/aviondespegando.avif',
-    'assets/img-portadamapa.avif',
-    'assets/pasajeroimgportada.avif'
+    'assets/vistaavion.avif',
+    'assets/dedospasaporte.avif',
+    "assets/pasaporteabierto.avif"
 ];
 
 // Preload images
