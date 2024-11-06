@@ -145,7 +145,9 @@
 .nav-links {
     display: none; /* Ocultar inicialmente */
 }
-
+.nav-links a:hover {
+    background: #f0f0f0; /* Fondo claro al pasar el mouse */
+}
 .nav-links.active {
     display: flex; /* Mostrar el menú cuando tiene la clase 'active' */
     flex-direction: column; /* Asegúrate de que los elementos se apilen verticalmente */

@@ -139,3 +139,36 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('scroll', handleScroll);
 });
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Evento de clic para el botón de "Contáctanos" en la sección "Nosotros"
+    const contactButton = document.querySelector('.btn.btn-blue');
+    contactButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.location.href = 'https://wa.me/543434590975'; // Redirecciona a WhatsApp
+    });
+
+    // Evento de clic en los enlaces de navegación para desplazamiento suave
+    const navLinks = document.querySelectorAll('.nav-links a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetId = link.getAttribute('href').substring(1);
+            const targetSection = document.getElementById(targetId);
+            window.scrollTo({
+                top: targetSection.offsetTop - 80, // Ajusta el valor según tu navbar
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    // Toggle del menú de navegación en dispositivos móviles
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinksContainer = document.querySelector('.nav-links');
+
+    navToggle.addEventListener('click', () => {
+        navLinksContainer.classList.toggle('nav-links-active');
+    });
+});
+
